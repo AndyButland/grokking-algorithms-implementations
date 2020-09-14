@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace GrokkingAlgorithms
 {
@@ -33,6 +34,50 @@ namespace GrokkingAlgorithms
             }
 
             return highestCountIndex;
+        }
+
+        public static Item[] QuickSort(Item[] items)
+        {
+            if (items.Length < 2)
+            {
+                return items;   // As "base case" array with 0 or 1 elements is already sorted.
+            }
+
+            var pivot = items[0];
+            var less = new List<Item>();
+            var greater = new List<Item>();
+
+            for (var i = 1; i < items.Length; i++)
+            {
+                if (items[i].Count <= pivot.Count)
+                {
+                    less.Add(items[i]);
+                }
+                else
+                {
+                    greater.Add(items[i]);
+                }
+            }
+
+            return QuickSort(greater.ToArray()).Concat(new Item[] { pivot }).Concat(QuickSort(less.ToArray())).ToArray();
+        }
+
+        public static List<Item> QuickSort2(List<Item> items)
+        {
+            if (items.Count < 2)
+            {
+                return items;   // As "base case" array with 0 or 1 elements is already sorted.
+            }
+
+            var pivot = items.First();
+            var rest = items.Skip(1);
+            var less = rest.Where(x => x.Count <= pivot.Count).ToList();
+            var greater = rest.Where(x => x.Count > pivot.Count).ToList();
+
+            var result = QuickSort2(greater);
+            result.Add(pivot);
+            result.AddRange(QuickSort2(less));
+            return result;
         }
 
         public class Item
