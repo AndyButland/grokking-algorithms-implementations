@@ -63,24 +63,24 @@ namespace GrokkingAlgorithms.Tests
         {
             return new KeyFinder.Box
             {
-                Boxes = new List<KeyFinder.Box>
+                Boxes = new KeyFinder.Box[]
                 {
                     new KeyFinder.Box(),
                     new KeyFinder.Box
                     {
-                        Boxes = new List<KeyFinder.Box>
+                        Boxes = new KeyFinder.Box[]
                         {
                             new KeyFinder.Box
                             {
-                                Boxes = new List<KeyFinder.Box>
+                                Boxes = new KeyFinder.Box[]
                                 {
                                     new KeyFinder.Box(),
                                     new KeyFinder.Box { HasKey = withKey },
-                                }.ToArray(),
+                                },
                             }
-                        }.ToArray()
+                        }
                     },
-                }.ToArray()
+                }
             };
         }
     }
