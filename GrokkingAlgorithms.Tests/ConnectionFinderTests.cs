@@ -53,6 +53,12 @@ namespace GrokkingAlgorithms.Tests
                             },
                             new ConnectionFinder.Node
                             {
+                                Id = 5,
+                                Name = "Elizabeth",
+                                Company = "E",
+                            },
+                            new ConnectionFinder.Node
+                            {
                                 Id = 3,
                                 Name = "Charlie",
                                 Company = "A",
@@ -69,7 +75,13 @@ namespace GrokkingAlgorithms.Tests
                                         Id = 5,
                                         Name = "Elizabeth",
                                         Company = "E",
-                                    }
+                                    },
+                                    new ConnectionFinder.Node
+                                    {
+                                        Id = 10,
+                                        Name = "Jane",
+                                        Company = "A",
+                                    },
                                 }
                             }
                         }
