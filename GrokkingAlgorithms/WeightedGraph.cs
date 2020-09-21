@@ -27,7 +27,7 @@ namespace GrokkingAlgorithms
             // Create a structure to track what nodes we've processed.
             var processed = new HashSet<string>();
 
-            // Find the lowest-code node we haven't yet processed.
+            // Find the lowest-cost node we haven't yet processed.
             var node = FindUnprocessedNodeWithLowestCost(costs, processed);
             
             // Loop while we have a node to process.
