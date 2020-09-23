@@ -5,7 +5,7 @@ namespace GrokkingAlgorithms
 {
     public static class WeightedGraph
     {
-        public static Result GetCheapestPath(Dictionary<string, Dictionary<string, int>> graph)
+        public static WeightedGraphResult GetCheapestPath(Dictionary<string, Dictionary<string, int>> graph)
         {
             // Create the costs and parents tracking data structures and populate
             // with the nodes from the graph.
@@ -62,7 +62,7 @@ namespace GrokkingAlgorithms
                 node = FindUnprocessedNodeWithLowestCost(costs, processed);
             }
 
-            return new Result
+            return new WeightedGraphResult
             {
                 Path = DescribePath(parents),
                 Weight = costs["Finish"]
@@ -103,13 +103,6 @@ namespace GrokkingAlgorithms
 
             pathParts.Add("Start");
             return string.Join(",", pathParts.Reverse());
-        }
-
-        public class Result
-        {
-            public string Path { get; set; }
-
-            public int Weight { get; set; }
         }
     }
 }

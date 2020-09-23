@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrokkingAlgorithms", "GrokkingAlgorithms\GrokkingAlgorithms.csproj", "{6A8E439F-5F9D-482E-9C11-A7D5FC781B1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrokkingAlgorithms", "GrokkingAlgorithms\GrokkingAlgorithms.csproj", "{6A8E439F-5F9D-482E-9C11-A7D5FC781B1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrokkingAlgorithms.Tests", "GrokkingAlgorithms.Tests\GrokkingAlgorithms.Tests.csproj", "{091E5523-8FEE-48A7-876B-744215EE64A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrokkingAlgorithms.Tests", "GrokkingAlgorithms.Tests\GrokkingAlgorithms.Tests.csproj", "{091E5523-8FEE-48A7-876B-744215EE64A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrokkingAlgorithms.Runner", "GrokkingAlgorithmsRunner\GrokkingAlgorithms.Runner.csproj", "{F7FB4DD5-3443-44A1-802A-E6B1D32C786B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{091E5523-8FEE-48A7-876B-744215EE64A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091E5523-8FEE-48A7-876B-744215EE64A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091E5523-8FEE-48A7-876B-744215EE64A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FB4DD5-3443-44A1-802A-E6B1D32C786B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FB4DD5-3443-44A1-802A-E6B1D32C786B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FB4DD5-3443-44A1-802A-E6B1D32C786B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FB4DD5-3443-44A1-802A-E6B1D32C786B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
